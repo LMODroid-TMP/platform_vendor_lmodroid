@@ -12,9 +12,9 @@ PRODUCT_PACKAGES += \
     apns-conf.xml
 
 # Telephony packages
+# OpenEUICC \
 PRODUCT_PACKAGES += \
     messaging \
-    OpenEUICC \
     Stk
 
 # Default ringtone

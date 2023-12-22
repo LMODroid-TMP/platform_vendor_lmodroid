@@ -20,7 +20,7 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 else
 # Enable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 
 # Disable extra StrictMode features on all non-engineering builds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
@@ -111,15 +111,15 @@ PRODUCT_PACKAGES += \
     build-manifest
 
 # Updater
-PRODUCT_PACKAGES += \
-    Updater
+#PRODUCT_PACKAGES += \
+#    Updater
 
 PRODUCT_COPY_FILES += \
     vendor/lmodroid/prebuilt/common/etc/init/init.lmodroid-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lmodroid-updater.rc
 
 # Panic
-PRODUCT_PACKAGES += \
-    Ripple
+#PRODUCT_PACKAGES += \
+#    Ripple
 
 # Prebuilt apps
 ifneq ($(TARGET_WITHOUT_PREBUILT_APPS),true)
@@ -130,12 +130,12 @@ PRODUCT_PACKAGES += \
 endif
 
 # F-Droid
-ifneq ($(WITH_GMS),true)
-PRODUCT_PACKAGES += \
-    F-Droid \
-    F-DroidPrivilegedExtension
-
-endif
+#ifneq ($(WITH_GMS),true)
+#PRODUCT_PACKAGES += \
+#    F-Droid \
+#    F-DroidPrivilegedExtension
+#
+#endif
 
 # LMO Framework
 PRODUCT_PACKAGES += \
@@ -143,15 +143,15 @@ PRODUCT_PACKAGES += \
     framework-lmodroid
 
 # SetupWizard
-PRODUCT_PACKAGES += \
-    LMOSetupWizard
+#PRODUCT_PACKAGES += \
+#    LMOSetupWizard
 
 # System apps
+#GameSpace \
+#ParallelSpace \
 PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
-    GameSpace \
-    ParallelSpace \
     PdfViewer \
     Recorder \
     Seedvault
@@ -162,8 +162,8 @@ PRODUCT_PACKAGES += \
 endif
 
 # TouchGestures
-PRODUCT_PACKAGES += \
-    TouchGestures
+#PRODUCT_PACKAGES += \
+#    TouchGestures
 
 # TTS
 $(call inherit-product, external/svox/svox_tts.mk)
