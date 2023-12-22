@@ -111,15 +111,15 @@ PRODUCT_PACKAGES += \
     build-manifest
 
 # Updater
-PRODUCT_PACKAGES += \
-    Updater
+#PRODUCT_PACKAGES += \
+#    Updater
 
 PRODUCT_COPY_FILES += \
     vendor/lmodroid/prebuilt/common/etc/init/init.lmodroid-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lmodroid-updater.rc
 
 # Panic
-PRODUCT_PACKAGES += \
-    Ripple
+#PRODUCT_PACKAGES += \
+#    Ripple
 
 # Prebuilt apps
 ifneq ($(TARGET_WITHOUT_PREBUILT_APPS),true)
@@ -130,12 +130,12 @@ PRODUCT_PACKAGES += \
 endif
 
 # F-Droid
-ifneq ($(WITH_GMS),true)
-PRODUCT_PACKAGES += \
-    F-Droid \
-    F-DroidPrivilegedExtension
-
-endif
+#ifneq ($(WITH_GMS),true)
+#PRODUCT_PACKAGES += \
+#    F-Droid \
+#    F-DroidPrivilegedExtension
+#
+#endif
 
 # LMO Framework
 PRODUCT_PACKAGES += \
@@ -143,8 +143,8 @@ PRODUCT_PACKAGES += \
     framework-lmodroid
 
 # SetupWizard
-PRODUCT_PACKAGES += \
-    LMOSetupWizard
+#PRODUCT_PACKAGES += \
+#    LMOSetupWizard
 
 # System apps
 PRODUCT_PACKAGES += \
