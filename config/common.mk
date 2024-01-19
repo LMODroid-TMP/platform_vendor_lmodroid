@@ -143,8 +143,8 @@ PRODUCT_PACKAGES += \
     framework-lmodroid
 
 # SetupWizard
-#PRODUCT_PACKAGES += \
-#    LMOSetupWizard
+PRODUCT_PACKAGES += \
+    LMOSetupWizard
 
 # System apps
 #GameSpace \
